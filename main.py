@@ -35,10 +35,13 @@ def get_birthday():
   return (next - today).days
 
 def get_words():
-  words = requests.get("https://api.shadiao.pro/chp")
-  if words.status_code != 200:
-    return get_words()
-  return words.json()['data']['text']
+  word=“亲爱的，谢谢你的礼物。非常非常喜欢，之前看图片只是觉得好看，今天开箱真的惊艳到我了，这个配色完全就是按照我喜欢的来的。这双鞋，我真的会珍藏好久好久，舍不得穿
+。接下来每个生日，你都要在！折现！哈哈哈”
+  return word
+#   words = requests.get("https://api.shadiao.pro/chp")
+#   if words.status_code != 200:
+#     return get_words()
+#   return words.json()['data']['text']
 
 def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
